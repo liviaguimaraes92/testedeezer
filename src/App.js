@@ -7,8 +7,8 @@ class App extends Component {
     musicas: [],
   }
 
-  async componentDiMount() {
-    const response = await api.get('/0');
+  async componentDidMount() {
+    const response = await api.get('chart/0');
     console.log(response)
     this.setState({ musicas: response.data });
 
@@ -19,11 +19,12 @@ class App extends Component {
 
     return (
       <div>
-        {console.log(musicas)}
-        {musicas.map(musica => (
-          <li key={musica.tracks.id}>
-            <h2><strong>Titulo da música:</strong>{musica.tracks.title}</h2>
-            <p>{musica.tracks.link}</p>
+               
+        {musicas?.tracks?.data.map(musica => (
+          <li key={musica.id}>
+            <h3><strong>Cantor(a):</strong>{musica.artista}</h3>
+            <h3><strong>Titulo da música:</strong>{musica.title}</h3>
+            <p>{musica.link}</p>
           </li>
         ))}
       </div>
