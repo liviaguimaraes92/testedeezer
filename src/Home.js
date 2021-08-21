@@ -28,36 +28,65 @@ function Home() {
     console.log('pesquisou: ', searchTerm);
   }
 
-// https://api.deezer.com/search?q=eminem
+  // https://api.deezer.com/search?q=eminem
   return (
     <React.Fragment>
       <div className="container">
         <div className="row">
-            <div className="col-md-12">
-                <h1 className="display-4 text-center">Top 10 Artistas Mundiais</h1>
+          <div className="col-lg-6 offset-4">
+            <div className="zoom">
+              <h1 className="display-4">Top 10 Artistas</h1>
             </div>
+          </div>
         </div>
       </div>
 
+      {/* <div className="container">
+        <div className="row">
+          <div className="col-lg-6 offset-4">
+            <section class="photo container">
+              <div class="photo__card">
+                <img class="photo__item" src="" alt="Imagem do artista">
+                  <div class="photo__overlay">
+                    <p class="overlay-text">nome do artista</p>
+                  </div>
+                </img>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div> */}
+
+
+
       <div className="container ml-5 mb-5">
         <div className="row">
-          <div className="col-md-8">
+          <div className="col-md-12 searchBar">
             <form onSubmit={(event) => search(event)}>
-                <input 
-                  id="nomeArtista"
-                  className="form-control"
-                  type="text"
-                  placeholder="Digite o nome do artista"
-                  onChange={(event) => handleSearchChange(event)}
-                />
-                <button type="submit" className="btn btn-primary">Buscar</button>
+              <input
+                id="nomeArtista"
+                className="form-control"
+                type="text"
+                placeholder="Digite o nome do artista ou música"
+                onChange={(event) => handleSearchChange(event)}
+              />
             </form>
           </div>
-          
+
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 offset-5">
+                <div>
+                  <button type="submit" className="btn btn-secondary buttonSearch">Buscar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="container">
+
         {songs?.tracks?.data.map(song => (
           <div className="row mb-3" key={song.id}>
             <div className="col-md-2">
@@ -67,7 +96,8 @@ function Home() {
             <div className="col-md-6">
               <h5><strong>Cantor(a):</strong>{song.artist.name}</h5>
               <h5><strong>Titulo da música:</strong>{song.title}</h5>
-              <a className="btn btn-primary" href={song.preview} target="_blank">play preview</a>
+              <h5><strong>Duração:</strong>{song.duration}s</h5>
+              <a className="btn btn-secondary" href={song.preview} target="_blank">play preview</a>
               <i className="fa fa-star-o" aria-hidden="true"></i>
             </div>
           </div>

@@ -60,3 +60,24 @@ ul {
 .photo__card:hover .photo__overlay {
     opacity: 1;
 }
+
+.searchBar{
+    margin: 0;
+    top: 10%;
+    left: 15%;
+    margin-right: -50%;
+}
+
+.buttonSearch{
+  
+    display: block;
+    margin-top: 8px;
+    width: 30ch;
+    margin: 1em auto;
+
+}
+
+.zoom{
+    overflow: hidden;
+    max-width: 100%;
+}
