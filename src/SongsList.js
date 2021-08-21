@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Favorite from "./Favorite";
 
 function SongsList(props) {
-  const { songs } = props;
+  const { songs, favoriteSongs, setFavoriteSongs } = props;
+ 
   return (
     <div className="container">
       {songs &&
@@ -32,9 +34,14 @@ function SongsList(props) {
                 href={song.preview}
                 target="_blank"
               >
-                play preview
+                <i class="fa fa-play" aria-hidden="true"></i>
               </a>
-              <i className="fa fa-star-o" aria-hidden="true"></i>
+              <Favorite 
+                songId={song.id}
+                songs={songs}
+                favoriteSongs={favoriteSongs}
+                setFavoriteSongs={setFavoriteSongs}
+              />
             </div>
           </div>
         ))}

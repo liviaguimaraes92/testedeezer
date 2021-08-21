@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import api from "./api/apideezer";
 import SongsList from "./SongsList";
+import FavoriteSongs from "./FavoriteSongs";
 
 function Home() {
   const [songs, setSongs] = useState([]);
+  const [favoriteSongs, setFavoriteSongs] = useState([]);
 
   useEffect(() => {
     const getSongs = async () => {
@@ -35,6 +37,20 @@ function Home() {
         <div className="row">
           <div className="col-lg-6 offset-4">
             <div className="photo">
+              <h1 className="display-4">Favoritos</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="row">
+        <FavoriteSongs favoriteSongs={favoriteSongs} />
+      </div>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 offset-4">
+            <div className="photo">
               <h1 className="display-4">Top 10 Artistas</h1>
             </div>
           </div>
@@ -43,7 +59,7 @@ function Home() {
 
       <div className="container ml-5 mb-5">
         <div className="row">
-          <div className="col-md-12 searchBar">
+          <div className="col-md-12">
             <form>
               <input
                 id="nomeArtista"
@@ -57,7 +73,11 @@ function Home() {
         </div>
       </div>
 
-      <SongsList songs={songs} />
+      <SongsList 
+        songs={songs} 
+        favoriteSongs={favoriteSongs}
+        setFavoriteSongs={setFavoriteSongs}
+      />
     </React.Fragment>
   )
 }
