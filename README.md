@@ -4,8 +4,8 @@ link do projeto: https://liviaguimaraes92.github.io/testedeezer/
 
 - Como rodar o projeto:
 <p>
-npm install<p>
-npm run start
+- npm install<p>
+- npm run start
 
  💻 ScreenShots
 
