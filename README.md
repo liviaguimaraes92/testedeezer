@@ -35,9 +35,9 @@ npm run start
   
 🖱 Linguagens
 
-HTML5
-CSS3
-JavaScript
+HTML5<p>
+CSS3<p>
+JavaScript<p>
 TypeScript
 
 🎨 Projeto
@@ -46,4 +46,4 @@ Finalizado (sujeito a melhorias).
   
 📩 Aviso:
   
-A api do deezer implementa politica de CORS necessário instalação no chromes para resolver o problema.
+A api do deezer implementa politica de CORS necessário instalação no chromes para ter acesso a API.
