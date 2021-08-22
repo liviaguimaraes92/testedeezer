@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import api from "./apideezer";
 import SongsList from "./SongsList";
-import FavoriteSongs from "./FavoriteSongs";
+import FavoriteSongs from "./FavoriteSongs"; 
+import ImagemSlider from "./components/ImageSlider";
+import { SliderData } from "./components/SliderData";
 
 function Home() {
   const [songs, setSongs] = useState([]);
@@ -30,31 +32,39 @@ function Home() {
 
   return (
     <React.Fragment>
-      {/* <div className="container">
+      <div className="container titulos">
         <div className="row">
-          <div className="col-lg-6 offset-4">
-            <div className="favs">
-              <h1 className="display-4">Top Artistas</h1>
-            </div>
+          <div className="col-md-12">
+              <h1>Top Artistas</h1>
           </div>
         </div>
-      </div> */}
-
-      {/* <div className="container">
-        <div className="row">
-          <div className="col-lg-6 offset-4">
-            <div className="favs">
-              <h1 className="display-4">Favoritos</h1>
-            </div>
-          </div>
-        </div>
-      </div> */}
+      </div> 
 
       <div className="row">
-        <FavoriteSongs favoriteSongs={favoriteSongs} />
+        <div className="col-md-12">
+        <ImagemSlider slides={SliderData} />
+        </div>
       </div>
+     
+          <div className="container display: flex; align-items: center titulos">
+            <div className="row">
+              <div className="col-md-12">
+                <div>
+                  <h1>Favoritos</h1>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <div className="container ml-5 mb-5">
+          <br></br>
+
+          <div className="flexContainer">
+        <FavoriteSongs favoriteSongs={favoriteSongs} />
+          </div>
+
+      <div></div>
+
+      <div className="container search">
         <div className="row">
           <div className="col-md-12">
             <form>
