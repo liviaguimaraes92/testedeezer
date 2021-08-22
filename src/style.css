@@ -10,10 +10,6 @@ ul {
     list-style-type:none;
 }
 
-.font-color{
-    font-color: white;
-}
-
 .photo{
     overflow: hidden;
 }
@@ -43,4 +39,9 @@ transform: scale(1.1);
     font-size: 25px;
     padding-left: 13px;
     cursor: pointer;
+}
+
+.titulos{
+    background-color: rgb(160, 160, 160);
+    justify-content: center;
 }

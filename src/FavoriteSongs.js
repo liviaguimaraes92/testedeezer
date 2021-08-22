@@ -4,6 +4,10 @@ function FavoriteSongs(props) {
   const { favoriteSongs } = props;
  
   return (
+
+
+
+
     <div className="container">
       {favoriteSongs &&
         favoriteSongs.map((song) => (
