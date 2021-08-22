@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Favorite from "./Favorite";
 
 function SongsList(props) {
@@ -12,7 +12,7 @@ function SongsList(props) {
         songs.data.map((song) => (
           <div className="row mb-3" key={song.id}>
             <div className="col-md-2">
-              <img src={song.album.cover} />
+              <img src={song.album.cover} alt={song.album.title} />
             </div>
 
             <div className="col-md-6">
@@ -22,8 +22,11 @@ function SongsList(props) {
               </h5>
               <h5>
                 <strong>Titulo da música: </strong>
-                <a href={song.link} target="_blank">
-                  {song.title}
+                <a 
+                  href={song.link} 
+                  target="_blank" 
+                  rel="noreferrer">
+                    {song.title}
                 </a>
               </h5>
               <h5>
@@ -34,8 +37,9 @@ function SongsList(props) {
                 className="btn btn-secondary"
                 href={song.preview}
                 target="_blank"
+                rel="noreferrer"
               >
-                <i class="fa fa-play" aria-hidden="true"></i>
+                <i className="fa fa-play" aria-hidden="true"></i>
               </a>
               <Favorite 
                 songId={song.id}

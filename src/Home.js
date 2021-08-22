@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import api from "./apideezer";
-import SongsList from "./SongsList";
-import FavoriteSongs from "./FavoriteSongs"; 
+import api from "./api/apideezer";
+import SongsList from "./components/SongsList";
+import FavoriteSongs from "./components/FavoriteSongs";
 import ImagemSlider from "./components/ImageSlider";
-import { SliderData } from "./components/SliderData";
 
 function Home() {
   const [songs, setSongs] = useState([]);
+  const [artists, setArtists] = useState([]);
   const [favoriteSongs, setFavoriteSongs] = useState([]);
 
   useEffect(() => {
     const getSongs = async () => {
       const response = await api.get("chart");
-      console.log(response.data)
       setSongs(response?.data?.tracks);
+      setArtists(response?.data?.artists);
     };
 
     getSongs();
@@ -35,49 +35,37 @@ function Home() {
       <div className="container titulos">
         <div className="row">
           <div className="col-md-12">
-              <h1>Top Artistas</h1>
+            <h1>Top Artistas</h1>
           </div>
-        </div>
-      </div> 
-
-      <div className="row">
-        <div className="col-md-12">
-        <ImagemSlider slides={SliderData} />
         </div>
       </div>
-     
-          <div className="container display: flex; align-items: center titulos">
-            <div className="row">
-              <div className="col-md-12">
-                <div>
-                  <h1>Favoritos</h1>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <br></br>
+      <div className="container">
+        <ImagemSlider slides={artists?.data} />
+      </div>
 
-          <div className="flexContainer">
-        <FavoriteSongs favoriteSongs={favoriteSongs} />
-          </div>
-
-      <div></div>
-
-      <div className="container search">
+      <div className="container display: flex; align-items: center titulos">
         <div className="row">
           <div className="col-md-12">
-            <form>
-              <input
-                id="nomeArtista"
-                className="form-control"
-                type="text"
-                placeholder="Digite o nome do artista ou música"
-                onChange={(event) => handleSearchChange(event)}
-              />
-            </form>
+            <div>
+              <h1>Favoritos</h1>
+            </div>
           </div>
         </div>
+      </div>
+
+      <div className="container flexContainer">
+        <FavoriteSongs favoriteSongs={favoriteSongs} />
+      </div>
+
+      <div className="container search">
+        <input
+          id="nomeArtista"
+          className="form-control"
+          type="text"
+          placeholder="Digite o nome do artista ou música"
+          onChange={handleSearchChange}
+        />
       </div>
 
       <SongsList

@@ -9,13 +9,13 @@ function Favorite(props) {
   const [starClass, setStarClass] = useState(unfavorite);
 
   function favoriteSong() {
-    if(starClass == unfavorite) {
+    if(starClass === unfavorite) {
       setStarClass(favorite);
-      const foundSong = songs.data.find(song => song.id == songId);
+      const foundSong = songs.data.find(song => song.id === songId);
       setFavoriteSongs(favoriteSongs.concat(foundSong));
     } else {
       setStarClass(unfavorite);
-      const newFavoriteSongs = favoriteSongs.filter(song => song.id != songId);
+      const newFavoriteSongs = favoriteSongs.filter(song => song.id !== songId);
       setFavoriteSongs(newFavoriteSongs);
     }
   }
@@ -23,7 +23,7 @@ function Favorite(props) {
   return (
     <i
       onClick={favoriteSong}
-      className={`fa ${starClass} star`}
+      className={`fa ${starClass} star btn btn-secondary`}
       aria-hidden="true"
     />
   )

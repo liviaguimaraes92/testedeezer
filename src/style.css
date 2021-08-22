@@ -10,6 +10,7 @@ ul {
 .star {
   font-size: 25px;
   padding-left: 13px;
+  margin-left: 13px;
   cursor: pointer;
 }
 
@@ -50,14 +51,14 @@ ul {
 }
 
 .slide{
-    opacity: 0;
-    transition-duration: 1s ease;
+  opacity: 0;
+  transition-duration: 1s ease;
 }
 
 .slide.active{
-opacity: 1;
-transition-duration: 1s;
-transform: scale(1.08);
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
 }
 
 .titulos{
@@ -69,11 +70,26 @@ transform: scale(1.08);
 }
 
 .search{
-  margin-bottom: 35px;
-  margin-left: 100px;
+  margin-bottom: 32px;
+  margin-top: 32px;
 }
 
 .flexContainer {
   display: flex;
-  width: 100%
+}
+
+.albumCover {
+  padding: 16px 16px 16px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.albumCover img {
+  width: 124px;
+}
+
+.albumCover span {
+  text-align: center;
+  margin-top: 6px;
+  width: 124px;
 }
