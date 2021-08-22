@@ -11,25 +11,25 @@ npm run start
 
 <h4>Cabeçalho</h4>
 
-<a href="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular1.jpg" title="cabeçalho" /></a>
+<img src="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular1.jpg" title="cabeçalho" /></a>
 <p>
 <p>
 
 <h4>Play e botão de favoritos</h4>
 
-<a href="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular2.jpg" title="play e botão de favoritos" /></a>
+<img src="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular2.jpg" title="play e botão de favoritos" /></a>
 <p>
 <p>
   
 <h4>Música adicionada aos favoritos (pode ser retirada) e estrela favoritada</h4>
 
-<a href="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular3.jpg" title="música add aos favoritos" /></a>
+<img src="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular3.jpg" title="música add aos favoritos" /></a>
 <p>
 <p>  
   
 <h4>Search interativo, busca por nome da música, cantor ou albúm</h4>
 
-<a href="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular4.jpg" title="search interativo" /></a>
+<img src="https://raw.githubusercontent.com/liviaguimaraes92/testedeezer/main/projetoangular4.jpg" title="search interativo" /></a>
 <p>
 <p>  
   
@@ -46,4 +46,4 @@ Finalizado (sujeito a melhorias).
   
 📩 Aviso:
   
-A api do deezer implementa politica de CORS.
+A api do deezer implementa politica de CORS necessário instalação no chromes para resolver o problema.
