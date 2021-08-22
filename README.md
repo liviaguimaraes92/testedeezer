@@ -3,7 +3,8 @@ Nesse repositório está o projeto que desenvolvi para aprender e praticar os co
 link do projeto: https://liviaguimaraes92.github.io/testedeezer/
 
 - Como rodar o projeto:
-npm install
+<p>
+npm install<p>
 npm run start
 
  💻 ScreenShots
