@@ -37,8 +37,7 @@ link do projeto: https://liviaguimaraes92.github.io/testedeezer/
 
 HTML5<p>
 CSS3<p>
-JavaScript<p>
-TypeScript
+JavaScript
 
 🎨 Projeto
   
